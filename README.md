@@ -1,2 +1,2 @@
-# de-identification
-de-identification of sensitive hospital data
+# De-Identification of Protected Health Information (PHI) and Text Data Mining
+The purpose of this program is to de-identify Protected Health Information (PHI) and perform text data mining on a vast amount of raw strings. Once loaded with the Excel documents containing columns of sensitive data, it automatically de-identifies the data in interest and assigns the index number which can be used by permitted user for indexing. On columns containing treatment history, it will retrieve the dates, drug name and treatment type automatically and inject to the new columns for better views.
