@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import re
 
-df1 = pd.read_excel('data_to_be_identified.xlsx')
-df2 = pd.read_excel('main_data.xlsx')
+df1 = pd.read_excel('Breast TMA test data2_IDENTIFIED.xlsx') # Imports Breast TMA test file
+df2 = pd.read_excel('HTSR-Patient-Database-10-13-2016-xlsx.xlsx') #Imports HTSR-Patient-Database.xlsx
 
 stems = pd.read_excel('Drug Suffix.xlsx')
 tlist = pd.read_excel('treatment_dict.xlsx')
@@ -137,7 +137,7 @@ for i in text_column:
 df1 = pd.concat([df1, te], axis=1)
 
 cols = df1.columns.tolist()
-cols = cols[-37:] + cols[:-37]
-df1 = df1[cols]
+cols = cols[-42:] + cols[:-42]
+df1 = df1[cols].set_index('Index#')
 
-df1.to_excel('de_identified_document.xlsx')
+df1.to_excel('de_identified_document.xlsx') #Exports to xlsx type
